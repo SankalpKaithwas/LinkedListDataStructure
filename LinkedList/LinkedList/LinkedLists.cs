@@ -43,5 +43,18 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        public void AppendNode(int data)
+        {
+            Node node = new Node(data);
+            if (head == null) 
+            {
+                head = tail = node;
+            }
+            else
+            {
+                tail.next = node;
+                tail = node;
+            }
+        }
     }
 }

@@ -6,9 +6,10 @@ namespace LinkedList
         static void Main(string[] args)
         {
             LinkedLists linkedList = new LinkedLists();
-            linkedList.AddNode(70);
-            linkedList.AddNode(30);
+            
             linkedList.AddNode(56);
+            linkedList.AppendNode(30);
+            linkedList.AppendNode(70);
             linkedList.Display();
 
         }
