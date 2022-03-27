@@ -46,7 +46,7 @@ namespace LinkedList
         public void AppendNode(int data)
         {
             Node node = new Node(data);
-            if (head == null) 
+            if (head == null)
             {
                 head = tail = node;
             }
@@ -54,6 +54,39 @@ namespace LinkedList
             {
                 tail.next = node;
                 tail = node;
+            }
+        }
+        public Node Search(int data)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            return null;
+        }
+        public void Insert(int data, int dataBefore)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                head = tail = node;
+            else
+            {
+                Node nodeBefore = Search(dataBefore);
+                if (nodeBefore != null)
+                {
+                    node.next = nodeBefore.next;
+                    nodeBefore.next = node;
+                    if (nodeBefore == tail)
+                    {
+                        tail = node;
+                    }
+                }
+
             }
         }
     }
