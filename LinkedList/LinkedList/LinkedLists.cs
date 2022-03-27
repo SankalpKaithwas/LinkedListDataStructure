@@ -6,13 +6,11 @@ namespace LinkedList
     {
         public Node head;
         public Node tail;
-
         public LinkedLists()
         {
             head = null;
             tail = null;
         }
-
         public void AddNode(int data)
         {
             Node node = new Node(data);
