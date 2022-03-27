@@ -12,7 +12,10 @@ namespace LinkedList
             linkedList.AppendNode(70);
             linkedList.Insert(40, 30);
             linkedList.Display();
-            Console.WriteLine();          
+            linkedList.DeleteNode(40);
+            Console.WriteLine("\nSize is " +linkedList.getSize());
+            linkedList.Display();
+            Console.WriteLine();           
             linkedList.DeleteEndNode();
             linkedList.Display();
 
@@ -25,6 +28,9 @@ namespace LinkedList
             {
                 Console.WriteLine("\nNode not found");
             }
+           
+
+
 
         }
     }

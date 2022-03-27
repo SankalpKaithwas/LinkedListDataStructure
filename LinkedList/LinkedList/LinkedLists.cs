@@ -117,5 +117,62 @@ namespace LinkedList
                 temp.next = null;
             }
         }
+        public int getSize()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+        public void DeleteNode(int data)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty");
+            }
+            else
+            {
+                Node node = Search(data);
+                if (node == null)
+                {
+                    Console.WriteLine("Node not found");
+                }
+                else if (node == head)
+                {
+                    head = head.next;
+                    if (node == tail)
+                    {
+                        tail = null;
+                    }
+                }
+                else
+                {
+                    Node nodeBefore = null;
+                    Node temp = head;
+                    while (temp != null)
+                    {
+                        if (temp.next == node)
+                        {
+                            nodeBefore = temp;
+                            break;
+                        }
+                        temp = temp.next;
+                    }
+                    nodeBefore.next = node.next;
+                    if (node == tail)
+                    {
+                        tail = nodeBefore;
+                    }
+                    else
+                    {
+                        node.next = null;
+                    }
+                }
+            }
+        }
     }
 }
