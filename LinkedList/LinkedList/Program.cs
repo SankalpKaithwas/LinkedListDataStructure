@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 namespace LinkedList
 {
     internal class Program
@@ -11,7 +11,8 @@ namespace LinkedList
             linkedList.AppendNode(70);
             linkedList.Insert(30, 56);
             linkedList.Display();
-            linkedList.DeleteFirstNode();
+            Console.WriteLine();          
+            linkedList.DeleteEndNode();
             linkedList.Display();
 
 

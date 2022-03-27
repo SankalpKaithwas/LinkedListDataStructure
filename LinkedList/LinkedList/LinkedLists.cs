@@ -86,7 +86,6 @@ namespace LinkedList
                         tail = node;
                     }
                 }
-
             }
         }
         public void DeleteFirstNode()
@@ -100,6 +99,22 @@ namespace LinkedList
                 Node temp = head;
                 head = head.next;
                 Console.WriteLine("\nRemoved from list " + temp.data);
+            }
+        }
+        public void DeleteEndNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
             }
         }
     }
