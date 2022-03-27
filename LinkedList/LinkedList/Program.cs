@@ -7,9 +7,10 @@ namespace LinkedList
         {
             LinkedLists linkedList = new LinkedLists();
 
-            linkedList.AddNode(56);
+            linkedList.AddNode(30);
+            linkedList.AddNode(56);            
             linkedList.AppendNode(70);
-            linkedList.Insert(30, 56);
+            linkedList.Insert(40, 30);
             linkedList.Display();
             Console.WriteLine();          
             linkedList.DeleteEndNode();
