@@ -15,6 +15,15 @@ namespace LinkedList
             linkedList.DeleteEndNode();
             linkedList.Display();
 
+            Node check = linkedList.Search(30);
+            if(check != null)
+            {
+                Console.WriteLine("\nNode found");
+            }
+            else
+            {
+                Console.WriteLine("\nNode not found");
+            }
 
         }
     }
